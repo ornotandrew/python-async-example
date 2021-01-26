@@ -10,4 +10,5 @@ app.get('/users', (req, res) => {
   res.status(200).json(users.slice((page - 1) * pageSize, page * pageSize));
 });
 
-app.listen(3000);
+const port = 3000
+app.listen(port, () => {console.log(`Listening on port ${port}...`)});
